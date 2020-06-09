@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Cnes</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div style="padding-bottom: 20 px !important;" th:if="${not #lists.isEmpty(listCnes)}">
+        <h2>Lista de Cnes</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Cod Cnes</th>
+                <th>Cod Ibge</th>
+                <th>Nome Fantasia</th>
+                <th>Tipo Unidade</th>
+                <th>Tipo Gestao</th>
+                <th>Nome Logradouro</th>
+                <th>Numero</th>
+                <th>Bairro</th>
+                <th>CEP</th>
+                <th>UF</th>
+                <th>Município</th>
+                <th>Telefone</th>
+                <th>Acão</th>
+            </tr>
+            <tr th:each="cnes : ${listCnes}">
+                <td th:text="${cnes.id}"><a href="/mcv/cnes/${cnes.id}"></a></td>
+                <td th:text="${cnes.codCnes}"></td>
+                <td th:text="${cnes.codIbge}"></td>
+                <td th:text="${cnes.nomeFantasia}"></td>
+                <td th:text="${cnes.dsTipoUnidade}"></td>
+                <td th:text="${cnes.tpGestao}"></td>
+                <td th:text="${cnes.nomeLogradouro}"></td>
+                <td th:text="${cnes.numeroEndereco}"></td>
+                <td th:text="${cnes.nomeBairro}"></td>
+                <td th:text="${cnes.codCep}"></td>
+                <td th:text="${cnes.uf}"></td>
+                <td th:text="${cnes.municipio}"></td>
+                <td th:text="${cnes.numeroTelefone}"></td>
+                <td><a th:href="${ '/mvc/cnes/' + cnes.id}">Visualizar</a></td>
+            </tr>
+        </table>
+        <div class="jumbotron">
+            <div class="row text-center">
+                <div class="col-sm-6">
+                    <div class="form-group">
+						<label class="col-sm-6 control-label">Tax Price:</label>
+						<p class="form-control-static" th:text="${salesTaxes}" >salesTaxes</p>
+					</div>
+                </div>
+                <div class="col-sm-6">
+                	<div class="form-group">
+						<label class="col-sm-6 control-label">Total Price:</label>
+						<p class="form-control-static" th:text="${totalSumPrice}" >totalSumPrice</p></div>
+					</div>
+	            </div>
+            </div>            
+        </div>
+
+		</div>
+</div>
+
+</body>
+</html>

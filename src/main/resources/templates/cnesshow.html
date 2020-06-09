@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Cnes</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    <h2>Cnes</h2>
+        <div style="padding-bottom: 20 px !important;">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Cnes Id:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${cnes.id}" >Product Id</p></div>
+                </div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Cod Cnes:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${cnes.codCnes}" >Cod Cnes</p></div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Cod Ibge:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${cnes.codIbge}" >Cod Ibge</p></div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Nome Fantasia:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${cnes.codCnes}" >Nome Fantasia</p></div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Tipo Unidade:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${cnes.dsTipoUnidade}" >Tipo Unidade</p></div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Tipo Gestao:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${cnes.tpGestao}" >Tipo Gestao</p></div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Nome Logradouro:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${cnes.nomeLogradouro}" >Nome Logradouro</p></div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Numero:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${cnes.numeroEndereco}" >Numero</p></div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Bairro:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${cnes.nomeBairro}" >Bairro</p></div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">CEP:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${cnes.codCep}" >CEP</p></div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">UF:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${cnes.uf}" >UF</p></div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Município:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${cnes.municipio}" >Município</p></div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Telefone:</label>
+					<div class="col-sm-10">
+						<p class="form-control-static" th:text="${cnes.numeroTelefone}" >Telefone</p></div>
+				</div>
+	            <div class="jumbotron">
+	            </div>
+            </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -31,6 +31,14 @@ public class Cnes implements Serializable {
     private String municipio;
     private String numeroTelefone;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public String getCodCnes() {
         return codCnes;
     }

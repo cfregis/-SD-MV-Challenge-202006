@@ -7,4 +7,4 @@ To run this program execute the class ChallengeApplication as a  spring boot app
 
 To run the tests  execute the class ChallengeApplicationTests as a JUnit Test on IDE, or use the command: mvn test, on terminal in the project directory.
 
-To access Swagger interface use http://localhost/swagger-ui.html and test the API.
+To access the interface use http://localhost/ and test the API.

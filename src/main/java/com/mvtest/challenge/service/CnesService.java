@@ -5,6 +5,7 @@ import com.mvtest.challenge.repository.CnesRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CnesService {
@@ -26,5 +27,9 @@ public class CnesService {
 
     public List<Cnes> findByDsTipoUnidade(String dsTipoUnidade) {
         return cnesRepository.findByDsTipoUnidade(dsTipoUnidade);
+    }
+
+    public Optional<Cnes> findById(Integer id) {
+        return cnesRepository.findById(id);
     }
 }
